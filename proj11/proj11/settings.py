@@ -52,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'proj11.urls'
 
+SETTINGS_PASS = os.path.dirname (os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PASS, 'proj11', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
